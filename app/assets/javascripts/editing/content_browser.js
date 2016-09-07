@@ -21,36 +21,51 @@ jQuery(function() {
             }
           }
         };
+      } else if (filter_context.person) {
+          return {
+          _obj_class: {
+            field: '_obj_class',
+            options: {
+              Person: {
+                icon: 'user',
+                enable_create: true, 
+                preset: {
+                  _obj_class: 'Person'
+                }
+              }
+            }
+          }
+        };  
       } else {
   			return {
   				_obj_class: {
-  				field: '_obj_class',
-  				options: {
-  					Image: {
-  						expanded: true,
-  						icon: 'image',
-  						field: 'features',
-  						options: {
-  							paid: {
-  								preset: {
-  									features: ['paid']
-  								}
-  							},
-  							free: {
-  							}
-  						}
-  					},
-  					Blog: {
-  						icon: 'page',
-  						enable_create: true,
-  						preset: {
-  							_obj_class: 'Blog'
-  						}
-  					},
-  					Downloads: {
-  						icon: 'generic'
-  					}
-  				}
+    				field: '_obj_class',
+    				options: {
+    					Image: {
+    						expanded: true,
+    						icon: 'image',
+    						field: 'features',
+    						options: {
+    							paid: {
+    								preset: {
+    									features: ['paid']
+    								}
+    							},
+    							free: {
+    							}
+    						}
+    					},
+    					Blog: {
+    						icon: 'page',
+    						enable_create: true,
+    						preset: {
+    							_obj_class: 'Blog'
+    						}
+    					},
+    					Downloads: {
+    						icon: 'generic'
+    					}
+    				}
   				}
   			};
       };

@@ -25,7 +25,8 @@ class BlogPost < Obj
   			TextWidget,
   			HeadlineWidget,
   			ImageWidget,
-  			TeaserWidget
+  			TeaserWidget,
+  			PersonWidget
   		]
   	else
   		[]

@@ -1,0 +1,8 @@
+<% if widget.person %>
+	<%= scrivito_tag :p, widget.person, :name %> 
+	<%= widget.person.name %>
+	<%= image_tag scrivito_url(widget.person.image) if widget.person.image %>
+	<%= scrivito_value widget.person.body %>
+<% else %>
+	No person linekd
+<% end %>
